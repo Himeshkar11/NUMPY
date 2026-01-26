@@ -152,3 +152,27 @@ print(f"this is the boolean array of all the failed students scores <60 {scores<
 print("we can also use this in assignment operators where upon achieveing the condition we can change the value of that cases")
 scores[scores<60]= 0
 print(f"this is the aray in which those who scored less than 60 marks will be termed with zero marks {scores}")
+
+print("Broadcasting in numpy")
+print("Broadcastingin numpy is a method by which you can operations on arrays with different shapes")
+print("the rules of brodcstingare as folows \n 1. th dimensions have the same size  (or) one of the dimension is of size 1 ")
+print("example is shown below ")
+arrbd1 = np.array([[1,2,3,4]]) # ofspe (1,4) 1 row and four columns
+print(f"the array arrbd 1 is \n  {arrbd1} \n and its shape is : {arrbd1.shape} ")
+arrbd2 = np.array([[1],[2],[3],[4]]) # of space (4,1) ir 4 rows and one column
+print(f"the array arrbd2 is \n  {arrbd2} \n and its shape is : {arrbd2.shape} ")
+print(f"the multiplication of arraybd 1 and array bd2 is :  \n {arrbd1*arrbd2}")
+arrbd3 = np.array([[1,2,3,4],[5,6,7,8]]) # of space (2,4) contains 2 rows and four colums 
+print(f"the array arrbd3 is \n  {arrbd3} \n and its shape is : {arrbd3.shape} ")
+try:
+    print(f"the multiplication of arrbd3 with arrbd2 is  impossible because it does not match rules {arrbd3*arrbd2}")
+except Exception as e :
+    print(f"The error is : {e} \n")
+print("becuase the multiplication of arrbd3 with arrbd2 is  impossible because it does not match rules")
+arrbd4 = np.array([ [1,2,3,4],[5,6,7,8], [9,10,11,12],[13,14,15,16]]) # of space(4,4)
+print(f"the array arrbd4 is \n  {arrbd4} \n and its shape is : {arrbd4.shape} ")
+print(f"the multiplication of arrbd4 with arrbd2 is possible here now: \n  {arrbd4*arrbd2} ")
+print("a small chitti question \n create a multiplication table using the brodacsting of array ")
+arrcq1 = np.array([[1,2,3,4,5,6,7,8,9,10]])
+arrcq2 = np.array([[1],[2],[3],[4],[5],[6],[7],[8],[9],[10]])
+print(f"The multiplication table is :\n {arrcq1*arrcq2}")
