@@ -176,3 +176,15 @@ print("a small chitti question \n create a multiplication table using the brodac
 arrcq1 = np.array([[1,2,3,4,5,6,7,8,9,10]])
 arrcq2 = np.array([[1],[2],[3],[4],[5],[6],[7],[8],[9],[10]])
 print(f"The multiplication table is :\n {arrcq1*arrcq2}")
+
+# aggregate functions
+# these are the functions which summarizes the data and returns a single value
+aggr = np.array([[1,2,3,4,5],
+                 [6,7,8,9,10]])
+print(f"the sum function \n syntax: np.sum(array) \n eg : {np.sum(aggr)} \n")
+print(f"the max function \n syntax: np.max(array) \n eg : {np.max(aggr)} \n")
+print(f"the standard deviation function \n syntax: np.std(array) \n eg : {np.std(aggr)} \n")
+print(f"the variance function \n syntax: np.var(array) \n eg : {np.var(aggr)} \n")
+print(f"the function to find the location of max element  \n syntax: np.argmax(array) \n eg : {np.argmax(aggr)} \n")
+print(f"the function to find the location of min element\n syntax: np.argmin(array) \n eg : {np.argmin(aggr)} \n")
+print(f"the function to get sum of all vertical elements or axis function  \n syntax: np.function(array, axis= 0 or 1 ) \n  axis =o for vertical \n axis =1 for horizontal   \n eg : {np.sum(aggr,axis = 0)} \n")
