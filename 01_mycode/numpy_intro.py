@@ -188,3 +188,23 @@ print(f"the variance function \n syntax: np.var(array) \n eg : {np.var(aggr)} \n
 print(f"the function to find the location of max element  \n syntax: np.argmax(array) \n eg : {np.argmax(aggr)} \n")
 print(f"the function to find the location of min element\n syntax: np.argmin(array) \n eg : {np.argmin(aggr)} \n")
 print(f"the function to get sum of all vertical elements or axis function  \n syntax: np.function(array, axis= 0 or 1 ) \n  axis =o for vertical \n axis =1 for horizontal   \n eg : {np.sum(aggr,axis = 0)} \n")
+print(" filtering in numpy ")
+# filtering in numpy refers to filter some elements out of the give data which does not match the condition 
+# it creates and returns a new array hence the original array is safe ?
+# but it may reduce the shape of the filtered array  example 
+ages = np.array([[21,17,19,20,16,30,18,65],
+                 [39,22,15,99,18,19,20,21]])
+teenagers = ages[ages<=18]
+print(f"The ages whicha re less than or equal to 18 will becreated {teenagers}")
+adults = ages[(ages>=18)& (ages<65)]
+print(f"the adults in the above array are {adults}")
+seos = ages[ages>=65]
+print(f"The ages of senior citizens are {seos}")
+odd_ages = ages[ages%2!=0]
+print(f"the people here with their ages odd are {odd_ages}")
+even_ages = ages[ages%2==0]
+print(f"the people here with their ages even are {even_ages}")
+print("filtering may inflate the shape of our data set so we will use a function called where to preserve the shape")
+print("the where function \n syntax : new_array = np.where(condition,original_array,fill value)")
+where_adults = np.where(ages>=18 ,ages,0)
+print(f"The where function is used here to preserve shape for adults \n {where_adults}")
